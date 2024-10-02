@@ -27,13 +27,41 @@ export default defineConfig({
 					items: [
 						{
 							label: 'Getting Started',
-							slug: 'hello-world'
+							slug: 'hello-world',
+							translations: {
+								fr: 'Commencer',
+							}
 						},
 					],
 				},
 				{
 					label: 'Commerce Cloud',
-					autogenerate: { directory: 'commerce-cloud' },
+					translations: {
+						fr: 'Commerce Cloud'
+					},
+					items: [
+						{
+							label: 'Introduction',
+							slug: 'commerce-cloud',
+							translations: {
+								fr: 'Introduction'
+							}
+						},
+						{
+							label: 'Cloud Build',
+							slug: 'commerce-cloud/build',
+							translations: {
+								fr: 'Construction de Cloud'
+							}
+						},
+						{
+							label: 'Cloud Deploy',
+							slug: 'commerce-cloud/deploy',
+							translations: {
+								fr: 'Déploiement dans le cloud'
+							}
+						},
+					]
 				},
 				{
 					label: 'Reference',
