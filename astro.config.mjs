@@ -7,6 +7,8 @@ export const locales = {
 	fr: { label: 'Français', lang: 'fr' },
 }
 export default defineConfig({
+	site: 'https://sap-cx-actions.github.io',
+	base: '/docs',
 	integrations: [
 		starlight({
 			title: 'SAP CX Actions',
