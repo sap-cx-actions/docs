@@ -9,6 +9,7 @@ export const locales = {
 export default defineConfig({
 	site: 'https://sap-cx-actions.github.io',
 	base: '/docs',
+	trailingSlash: 'never',
 	integrations: [
 		starlight({
 			title: 'SAP CX Actions',
