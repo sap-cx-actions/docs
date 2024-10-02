@@ -15,6 +15,8 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/sap-cx-actions/docs',
 			},
+			lastUpdated: true,
+			pagination: false,
 			customCss: ['./src/assets/landing.css'],
 			defaultLocale: 'root',
 			locales,
