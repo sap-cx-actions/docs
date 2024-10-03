@@ -1,6 +1,6 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
 
 export const locales = {
 	root: { label: 'English', lang: 'en' },
@@ -12,15 +12,31 @@ export default defineConfig({
 	trailingSlash: 'never',
 	integrations: [
 		starlight({
-			title: 'SAP CX Actions',
 			social: {
 				github: 'https://github.com/sap-cx-actions/docs',
 			},
+			title: 'SAP CX Actions',
+			description: 'The SAP CX GitHub Actions documentation provides comprehensive guides and resources for automating SAP Commerce Cloud workflows using GitHub Actions. Learn how to streamline your CI/CD processes with detailed examples and best practices.',
+			editLink: {
+				baseUrl: 'https://github.com/sap-cx-actions/docs/edit/main/',
+			},
 			lastUpdated: true,
 			pagination: false,
-			customCss: ['./src/assets/landing.css'],
+			customCss: ['./src/assets/landing.css', './src/assets/custom.css'],
 			defaultLocale: 'root',
 			locales,
+			expressiveCode: {
+				themes: ['github-light'],
+				shiki: {
+					langs: [
+						// import('./some-exported-grammar.mjs'),
+						// JSON.parse(fs.readFileSync('./some-json-grammar.json', 'utf-8'))
+					],
+				},
+				plugins: [
+					pluginLineNumbers()
+				],
+			},
 			sidebar: [
 				{
 					label: 'Hello, World!',
@@ -42,6 +58,7 @@ export default defineConfig({
 					translations: {
 						fr: 'Commerce Cloud'
 					},
+					badge: 'New',
 					items: [
 						{
 							label: 'Introduction',

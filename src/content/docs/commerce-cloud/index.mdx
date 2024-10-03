@@ -1,8 +1,39 @@
 ---
 title: Introduction
 description: An introduction to the Commerce Cloud documentation.
-sidebar:
-  badge: New
 ---
+import { Aside } from '@astrojs/starlight/components';
 
-This is the introduction to the Commerce Cloud documentation. It should provide a high-level overview of what Commerce Cloud is and what users can expect to find in the documentation.
+To automate the build and deployment process of SAP Commerce Cloud in the Public Cloud (CCv2) projects, we have created two GitHub Actions: [SAP Commerce Cloud - Build](/docs/commerce-cloud/build) and [SAP Commerce Cloud - Deploy](/docs/commerce-cloud/deploy). These actions provide functionalities to perform build and deployment operations on SAP Commerce Cloud in the Public Cloud (CCv2) projects maintained in the GitHub repository.
+
+## Prerequisites
+
+- SAP Commerce Cloud in the Public Cloud (CCv2) project with the required configurations.
+- GitHub repository with SAP Commerce Cloud code as per the CCv2 project structure. (Refer to the [Commerce Cloud Sample Setup](https://github.com/SAP-samples/cloud-commerce-sample-setup) for more details.)
+- GitHub Actions enabled in the repository.
+- Webhook URL (Slack or Microsoft Teams) to send notifications.
+- GitHub token with the required permissions.
+- SAP Commerce Cloud in the Public Cloud (CCv2) API Token.
+- SAP Commerce Cloud in the Public Cloud (CCv2) Subscription Code.
+
+<Aside type="tip">
+    Refer [SAP Commerce Cloud API Token](https://help.sap.com/docs/SAP_COMMERCE_CLOUD_PUBLIC_CLOUD/0fa6bcf4736c46f78c248512391eb467/65e64c9602534b8aaf25bb119670614f.html?locale=en-US) for more details on how to generate and maintain API Tokens in the SAP Cloud portal.
+</Aside>
+
+## SAP Commerce Cloud - Build
+
+This GitHub Action provides the following functionalities to perform build operations on SAP Commerce Cloud in the Public Cloud (CCv2) projects. Read more about the [SAP Commerce Cloud - Build](/docs/commerce-cloud/build) action.
+- **Trigger Build**: Trigger SAP Commerce Cloud build.
+- **Build Notification**: Sends a notification when a build is triggered in CCv2.
+- **Build Status Notification**: Frequently check the build status and send notifications when success or failure.
+- **Retry On Failure**: Retry the build creation if it fails for the _maxRetries_ times.
+
+## SAP Commerce Cloud - Deploy
+
+This GitHub Action provides the following functionalities to perform deployment operations on SAP Commerce Cloud in the Public Cloud (CCv2) projects. Read more about the [SAP Commerce Cloud - Deploy](/docs/commerce-cloud/deploy) action.
+- **Trigger Deployment**: Trigger SAP Commerce Cloud deployment.
+- **Deployment Notification**: Sends a notification when a deployment is triggered in CCv2.
+- **Deployment Status Notification**: Frequently check the deployment status and send notifications when success or failure.
+
+
+<Aside type="caution">To ensure the API Token remains valid, it must be regenerated every 6 months by a cloud portal user with a valid S-User ID and access to tokens.</Aside>
