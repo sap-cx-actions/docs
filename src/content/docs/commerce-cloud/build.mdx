@@ -32,11 +32,11 @@ Public Cloud (CCv2) projects.
 
 ## Getting Started
 
-See [action.yml](action.yml)
+Check this GitHub Action on the [GitHub Marketplace](https://github.com/marketplace/actions/sap-commerce-build)
 
 ### Example Workflow
 
-Create a workflow YAML file (e.g., .github/workflows/build.yml) in your repository with the following content:
+Create a workflow YAML file (e.g., `.github/workflows/build.yml`) in your repository with the following content:
 
 ```yml title=.github/workflows/build.yml
 name: Build SAP Commerce Cloud
@@ -61,7 +61,7 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Test Local Action
+      - name: SAP Commerce Build
         id: build-action
         uses: sap-cx-actions/commerce-build@v1
         with:

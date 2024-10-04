@@ -1,0 +1,12 @@
+.task-list-item {
+    list-style-type: none;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+}
+
+h3 svg {
+    margin-left: 0.5em;
+}

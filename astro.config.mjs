@@ -22,17 +22,11 @@ export default defineConfig({
 			},
 			lastUpdated: true,
 			pagination: false,
-			customCss: ['./src/assets/landing.css', './src/assets/custom.css'],
+			customCss: ['./src/assets/styles/landing.css', './src/assets/styles/custom.css'],
 			defaultLocale: 'root',
 			locales,
 			expressiveCode: {
 				themes: ['github-light'],
-				shiki: {
-					langs: [
-						// import('./some-exported-grammar.mjs'),
-						// JSON.parse(fs.readFileSync('./some-json-grammar.json', 'utf-8'))
-					],
-				},
 				plugins: [
 					pluginLineNumbers()
 				],
@@ -79,6 +73,13 @@ export default defineConfig({
 							slug: 'commerce-cloud/deploy',
 							translations: {
 								fr: 'Déploiement dans le cloud'
+							}
+						},
+						{
+							label: 'Notifications',
+							slug: 'commerce-cloud/notifications',
+							translations: {
+								fr: 'Notifications'
 							}
 						},
 					]

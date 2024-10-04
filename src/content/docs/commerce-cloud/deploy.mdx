@@ -6,6 +6,8 @@ description: Action to deploy the code in the cloud.
 This GitHub Action provides the following functionalities to perform deployment operations on SAP Commerce Cloud in the
 Public Cloud (CCv2) projects.
 
+## Project Status
+
 ### 🚀 Completed Items
 
 - [x] **Trigger Deployment**: Trigger SAP Commerce Cloud deployment.
@@ -30,7 +32,7 @@ Public Cloud (CCv2) projects.
 
 ## Getting Started
 
-See [action.yml](action.yml)
+Check this GitHub Action on the [GitHub Marketplace](https://github.com/marketplace/actions/commerce-deploy)
 
 ### Example Workflow
 
@@ -61,7 +63,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Trigger SAP Commerce Cloud Deployment
+      - name: SAP Commerce Deployment
         id: deploy-action
         uses: sap-cx-actions/commerce-deploy@v1
         with:
