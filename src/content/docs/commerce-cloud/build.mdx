@@ -81,23 +81,23 @@ jobs:
 
 ### Environment Variables
 
-| Variable           | Purpose                                                                                                                                                                                                   | Required |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| SAP_CCV2_API_TOKEN | SAP Commerce Cloud in the Public Cloud (CCv2) [API Token](https://help.sap.com/docs/SAP_COMMERCE_CLOUD_PUBLIC_CLOUD/0fa6bcf4736c46f78c248512391eb467/65e64c9602534b8aaf25bb119670614f.html?locale=en-US). | True     |
-| SAP_CCV2_SUB_CODE  | SAP Commerce Cloud in the Public Cloud (CCv2) Subscription Code                                                                                                                                           | True     |
-| WEBHOOK_URL        | The Webhook URL to send notifications.                                                                                                                                                                    | False    |
+| Variable           | Purpose                                                                                                                                                                                                    | Required |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| SAP_CCV2_API_TOKEN | SAP Commerce Cloud in the Public Cloud (CCv2) [API Token](https://help.sap.com/docs/SAP_COMMERCE_CLOUD_PUBLIC_CLOUD/0fa6bcf4736c46f78c248512391eb467/65e64c9602534b8aaf25bb119670614f.html?locale=en-US).  | True     |
+| SAP_CCV2_SUB_CODE  | SAP Commerce Cloud in the Public Cloud (CCv2) Subscription Code                                                                                                                                            | True     |
+| WEBHOOK_URL        | The Webhook URL to send notifications.                                                                                                                                                                     | False    |
 
 ### Inputs
 
-| Attribute           | Purpose                                                                                        | Required | Default              | Example          |
-| ------------------- | ---------------------------------------------------------------------------------------------- | -------- | -------------------- | ---------------- |
-| branch              | The branch name or tag to trigger the build.                                                   | True     |                      | `release/v1.0.0` |
-| buildName           | The name of the build.                                                                         | False    |                      |                  |
-| checkStatusInterval | The interval in milliseconds to check the build status.                                        | False    | `300000` (5 minutes) |                  |
-| retryOnFailure      | Retry the build if failed.                                                                     | False    | `false`              |                  |
-| maxRetries          | The maximum number of retries.                                                                 | False    | `3`                  |                  |
-| notify              | Send notifications on the build status.                                                        | False    | `false`              |                  |
-| dryRun              | Run the action in dry-run mode. If true, the action will not trigger the build in actual CCv2. | False    | `false`              |                  |
+| Attribute           | Purpose                                                                                         | Required | Default              | Example          |
+|---------------------|-------------------------------------------------------------------------------------------------|----------|----------------------|------------------|
+| branch              | The branch name or tag to trigger the build.                                                    | True     |                      | `release/v1.0.0` |
+| buildName           | The name of the build.                                                                          | False    |                      |                  |
+| checkStatusInterval | The interval in milliseconds to check the build status.                                         | False    | `300000` (5 minutes) |                  |
+| retryOnFailure      | Retry the build if failed.                                                                      | False    | `false`              |                  |
+| maxRetries          | The maximum number of retries.                                                                  | False    | `3`                  |                  |
+| notify              | Send notifications on the build status.                                                         | False    | `false`              |                  |
+| dryRun              | Run the action in dry-run mode. If true, the action will not trigger the build in actual CCv2.  | False    | `false`              |                  |
 
 ### Outputs
 
