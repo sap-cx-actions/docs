@@ -3,7 +3,46 @@ title: Getting Started
 description: An introduction to the Commerce Cloud documentation.
 banner:
     content: |
-        We just launched this new documentation and still have a lot of content to add.
+        We have launched this new documentation and are adding more content.
 ---
 
-This is the introduction to the Commerce Cloud documentation. It should provide a high-level overview of what Commerce Cloud is and what users can expect to find in the documentation.
+Getting Started with SAP Commerce Cloud Build and Deployment Automation using GitHub Actions
+
+This guide provides a comprehensive overview of how to automate the build and deployment processes for SAP Commerce Cloud projects using GitHub Actions.
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+- A GitHub account
+- A SAP Commerce Cloud project
+- GitHub Actions enabled in your repository
+- Required secrets configured in your GitHub repository
+
+## Setting Up GitHub Actions
+
+### 1. Create a Workflow File
+
+Create a `.github/workflows` directory in your repository if it doesn't exist. Inside this directory, create a workflow file (e.g., `ci-cd.yml`).
+
+### 2. Define Environment Variables
+
+Add the necessary environment variables in your workflow file. These variables include the webhook URLs for notifications and any other required secrets.
+
+### 3. Configure Build Action
+
+The build action compiles your SAP Commerce Cloud project.
+
+### 4. Configure Deployment Action
+
+The deployment action deploys your SAP Commerce Cloud project.
+
+## Example Workflows
+
+Check out  [SAP Commerce Cloud - Build](/docs/commerce-cloud/build) and [SAP Commerce Cloud - Deploy](/docs/commerce-cloud/deploy) for detailed information on how to configure the build and deployment actions.
+
+## Conclusion
+
+By following this guide, you can automate the build and deployment processes for your SAP Commerce Cloud projects using GitHub Actions. This setup ensures that your project is built and deployed consistently and efficiently, with notifications sent to your preferred communication channels.
+
+For more detailed information, refer to the official documentation of SAP Commerce Cloud and GitHub Actions.
