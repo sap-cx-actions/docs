@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+import starlightImageZoom from 'starlight-image-zoom'
 
 export const locales = {
 	root: { label: 'English', lang: 'en' },
@@ -15,6 +16,21 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/sap-cx-actions/docs',
 			},
+			head: [
+				{
+					tag: 'script',
+					content: `
+						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+						})(window,document,'script','dataLayer','GTM-KS9CC43P');
+					  `,
+				},
+			],
+			plugins: [
+				starlightImageZoom()
+			],
 			title: 'SAP CX Actions',
 			description: 'The SAP CX GitHub Actions documentation provides comprehensive guides and resources for automating SAP Commerce Cloud workflows using GitHub Actions. Learn how to streamline your CI/CD processes with detailed examples and best practices.',
 			editLink: {

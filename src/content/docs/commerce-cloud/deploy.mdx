@@ -14,21 +14,21 @@ Public Cloud (CCv2) projects.
 - [x] **Deployment Notification**: Sends a notification when a deployment is triggered in CCv2.
 - [x] **Deployment Status Notification**: Frequently check the deployment status and send notifications when success or failure.
 - [x] **Notifications**: Notify the user via email or webhook when the build is triggered or completed.
-  - [x] Trigger Deployment: Triggered with deployment is created in CCv2.
-  - [x] Deployment Completed: Triggered when the deployment is completed in CCv2 whether it is success or failure.
-  - [x] Slack: Send notifications to Slack.
-  - [x] Microsoft Teams: Send notifications to Microsoft Teams.
+- [x] Trigger Deployment: Triggered with deployment is created in CCv2.
+- [x] Deployment Completed: Triggered when the deployment is completed in CCv2 whether it is success or failure.
+- [x] Slack: Send notifications to Slack.
+- [x] Microsoft Teams: Send notifications to Microsoft Teams.
 
 ### 🔧 Planned Items
 
 - [ ] **Testing**: Improve test coverage with end-to-end tests.
 - [ ] **Notifications**: Notify the user via email or webhook when the build is triggered or completed.
-    - [ ] Deployment Progress: Check the deployment status and send notifications. (Is it required?)
-    - [ ] Email: Send notifications to email.
-    - [ ] SendGrid: Send notifications using SendGrid.
-    - [ ] AWS SES: Send notifications using AWS SES.
-    - [ ] Custom SMTP: Send notifications using custom SMTP.
-    - [ ] Similar SMTP services.
+  - [ ] Deployment Progress: Check the deployment status and send notifications. (Is it required?)
+  - [ ] Email: Send notifications to email.
+  - [ ] SendGrid: Send notifications using SendGrid.
+  - [ ] AWS SES: Send notifications using AWS SES.
+  - [ ] Custom SMTP: Send notifications using custom SMTP.
+  - [ ] Similar SMTP services.
 
 ## Getting Started
 
@@ -73,6 +73,7 @@ jobs:
           deploymentMode: 'ROLLING_UPDATE'
           notify: true
           dryRun: false
+          timezone: America/New_York
 
       - name: Print Output
         id: output
@@ -98,6 +99,7 @@ jobs:
 | deploymentMode      | The deployment strategy.                                                                                                       | True     |         | `ROLLING_UPDATE`, `RECREATE`, `GREEN` |
 | notify              | Send notifications to the provided destination.                                                                                | False    | `false` | `true`, `false`                       |
 | dryRun              | Run the action in dry-run mode. If true, the action will not trigger the deployment in actual CCv2.                            | False    | `false` | `false`                               |
+| timezone            | The timezone to use for the timestamps.                                                                                        | False    | `America/New_York`   |                  |
 
 ### Outputs
 

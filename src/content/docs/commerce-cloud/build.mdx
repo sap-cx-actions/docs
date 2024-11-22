@@ -15,20 +15,20 @@ Public Cloud (CCv2) projects.
 - [x] **Build Status Notification**: Frequently check the build status and send notifications when success or failure.
 - [x] **Retry On Failure**: Retry the build creation if it fails for the maxRetries times.
 - [x] **Notifications**: Notify the user via email or webhook when the build is triggered or completed.
-    - [x] Create Build: Triggered with build is created in CCv2.
-    - [x] Build Completed: Triggered when the build is completed in CCv2 whether it is success or failure.
-    - [x] Slack: Send notifications to Slack.
-    - [x] Microsoft Teams: Send notifications to Microsoft Teams.
+  - [x] Create Build: Triggered with build is created in CCv2.
+  - [x] Build Completed: Triggered when the build is completed in CCv2 whether it is success or failure.
+  - [x] Slack: Send notifications to Slack.
+  - [x] Microsoft Teams: Send notifications to Microsoft Teams.
 
 ### 🔧 Planned Items
 
 - [ ] **Testing**: Improve test coverage with end-to-end tests.
 - [ ] **Notifications**: Notify the user via email or webhook when the build is triggered or completed.
-    - [ ] Email: Send notifications to email.
-    - [ ] SendGrid: Send notifications using SendGrid.
-    - [ ] AWS SES: Send notifications using AWS SES.
-    - [ ] Custom SMTP: Send notifications using custom SMTP.
-    - [ ] Similar SMTP services.
+  - [ ] Email: Send notifications to email.
+  - [ ] SendGrid: Send notifications using SendGrid.
+  - [ ] AWS SES: Send notifications using AWS SES.
+  - [ ] Custom SMTP: Send notifications using custom SMTP.
+  - [ ] Similar SMTP services.
 
 ## Getting Started
 
@@ -72,6 +72,7 @@ jobs:
           maxRetries: 3
           notify: true
           dryRun: true
+          timezone: America/New_York
 
       - name: Print Output
         id: output
@@ -98,6 +99,7 @@ jobs:
 | maxRetries          | The maximum number of retries.                                                                  | False    | `3`                  |                  |
 | notify              | Send notifications on the build status.                                                         | False    | `false`              |                  |
 | dryRun              | Run the action in dry-run mode. If true, the action will not trigger the build in actual CCv2.  | False    | `false`              |                  |
+| timezone            | The timezone to use for the timestamps.                                                         | False    | `America/New_York`   |                  |
 
 ### Outputs
 
